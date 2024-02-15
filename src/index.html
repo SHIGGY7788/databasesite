@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-slate-700">
+
+
+
+<style>
+    
+    /*90degree rotation smooth animation*/
+    .toggled {
+        transform: rotate(90deg);
+        transition: transform 0.3s;
+    }
+    .untoggled {
+        transform: rotate(0deg);
+        transition: transform 0.3s;
+    }
+</style>
+
+
+
+<!-- Database list on the left of the page -->
+<div class="flex flex-col w-1/5 h-screen bg-slate-800">
+    <div class="flex justify-center items-center h-16 bg-slate-900">
+        <h1 class="text-white">Databases</h1>
+    </div>
+    <div class="flex flex-col p-4">
+        <div class="">
+            <p class="text-white flex items-center">
+                <button id="db-dropdown" class="untoggled">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+                <button class="hover:bg-slate-500" onclick="GetDBInfo()">Database 1</button>
+            </p>
+            <ul class="text-white ml-[25%] hidden" id="db1-list">
+                <li class="hover:bg-slate-500">Table 1</li>
+            </ul>
+        </div>
+        <div class="border-t-[1px] border-white"></div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
